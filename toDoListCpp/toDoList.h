@@ -24,5 +24,3 @@ private:
 };
 
 #endif  //TODOLIST_H
-
-#endif  //TODOLIST_H
