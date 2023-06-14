@@ -1,7 +1,7 @@
 #include "display.h"
 #include "toDoList.h"
 
-void Display::display() {
+void Display::display(ToDoList& toDo) {
     int choice;
     do {
         std::cout << "===== TO-DO LIST PROGRAM =====" << std::endl;
@@ -11,7 +11,6 @@ void Display::display() {
         std::cout << "4. Exit" << std::endl;
         std::cout << "Enter your choice (1-4): ";
         std::cin >> choice;
-        ToDoList toDo;
 
         switch(choice) {
             case 1: {
@@ -28,7 +27,7 @@ void Display::display() {
                 int index;
                 std::cout << "Enter task index to mark as completed: ";
                 std::cin >> index;
-                toDo.updateTask(index, "task name new");
+                toDo.updateTaskDesc(index, "task name new");
                 break;
             }
             case 3: {
