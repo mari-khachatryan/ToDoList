@@ -2,6 +2,7 @@
 
 int main() {
     Display d;
-    d.display();
+    ToDoList todo;
+    d.display(todo);
     return 0;
 }
