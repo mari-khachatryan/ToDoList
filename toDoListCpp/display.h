@@ -1,5 +1,7 @@
+#include "ToDoList.h"
+
 class Display {
 public:
     Display() = default;
-    void display();
+    void display(ToDoList& toDo);
 };
