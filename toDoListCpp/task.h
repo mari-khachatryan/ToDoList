@@ -1,6 +1,3 @@
-// #ifdef TASK_H
-// #define TASK_H
-
 #include <iostream>
 #include <vector>
 #include "date.h"
@@ -20,5 +17,3 @@ private:
     bool completed;
     Date date;
 };
-
-// #endif  //TASK_H
