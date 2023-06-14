@@ -51,8 +51,6 @@ void ToDoList::updateTask(int number, Date d) {
 
 void ToDoList::viewTasks() {
     std::cout << "Hello" ;
-    // std::time_t currentTime = std::time(nullptr);
-    // std::string currentDate = std::ctime(&currentTime);
     Date date;
     time_t now = time(0);
     tm* ltm = localtime(&now);
@@ -73,18 +71,16 @@ void ToDoList::viewTasks() {
                 << " | "  << tasks[i].getDate().getDateStr() << std::endl;
                 system("Color E4");
                 std::cout << "deadline ends in 1 day!!";
-            }
-
-            if(date.getDay() - tasks[i].getDate().getDay() == 1) {
+            }else if(date.getDay() - tasks[i].getDate().getDay() < 0) {
                 std::cout << i + 1 << ". " << tasks[i].getDescription() << " | " << res 
                 << " | " << tasks[i].getDate().getDateStr() << std::endl;
                 system("Color E4");
                 std::cout << "Deadlines are missed!!";
+            } else {
+                std::cout << i + 1 << ". " << tasks[i].getDescription() << " | " << res
+                << " | " << tasks[i].getCompleted() << std::endl;
             }
         }
-        
-        std::cout << i + 1 << ". " << tasks[i].getDescription() << " | " << tasks[i].getCompleted() << " | " << tasks[i].getCompleted() << std::endl;
-        
     }
 }
 
